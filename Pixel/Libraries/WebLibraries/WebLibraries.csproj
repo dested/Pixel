@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBF1829B-3446-4C0D-A75A-9BC713D2A6A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebLibraries</RootNamespace>
+    <AssemblyName>WebLibraries</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NoStdLib>True</NoStdLib>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CodeMirror\CodeEditorCursor.cs" />
+    <Compile Include="CodeMirror\CodeEditorToken.cs" />
+    <Compile Include="CodeMirror\CodeMirror.cs" />
+    <Compile Include="CodeMirror\CodeMirrorKeyMap.cs" />
+    <Compile Include="CodeMirror\CodeMirrorLine.cs" />
+    <Compile Include="CodeMirror\CodeMirrorOptions.cs" />
+    <Compile Include="Common\Compressor.cs" />
+    <Compile Include="Common\KeyboardJS.cs" />
+    <Compile Include="Common\KeyboardJSBind.cs" />
+    <Compile Include="Common\KeyboardJSBindKey.cs" />
+    <Compile Include="Common\XStats.cs" />
+    <Compile Include="SocketIOClient\SocketIOClient.cs" />
+    <Compile Include="UglifyJS\AST_Accessor.cs" />
+    <Compile Include="UglifyJS\AST_Array.cs" />
+    <Compile Include="UglifyJS\AST_Assign.cs" />
+    <Compile Include="UglifyJS\AST_Atom.cs" />
+    <Compile Include="UglifyJS\AST_Binary.cs" />
+    <Compile Include="UglifyJS\AST_Block.cs" />
+    <Compile Include="UglifyJS\AST_BlockStatement.cs" />
+    <Compile Include="UglifyJS\AST_Boolean.cs" />
+    <Compile Include="UglifyJS\AST_Break.cs" />
+    <Compile Include="UglifyJS\AST_Call.cs" />
+    <Compile Include="UglifyJS\AST_Case.cs" />
+    <Compile Include="UglifyJS\AST_Catch.cs" />
+    <Compile Include="UglifyJS\AST_Conditional.cs" />
+    <Compile Include="UglifyJS\AST_Const.cs" />
+    <Compile Include="UglifyJS\AST_Constant.cs" />
+    <Compile Include="UglifyJS\AST_Continue.cs" />
+    <Compile Include="UglifyJS\AST_Debugger.cs" />
+    <Compile Include="UglifyJS\AST_Default.cs" />
+    <Compile Include="UglifyJS\AST_Definitions.cs" />
+    <Compile Include="UglifyJS\AST_Defun.cs" />
+    <Compile Include="UglifyJS\AST_Directive.cs" />
+    <Compile Include="UglifyJS\AST_Do.cs" />
+    <Compile Include="UglifyJS\AST_Dot.cs" />
+    <Compile Include="UglifyJS\AST_DWLoop.cs" />
+    <Compile Include="UglifyJS\AST_EmptyStatement.cs" />
+    <Compile Include="UglifyJS\AST_Exit.cs" />
+    <Compile Include="UglifyJS\AST_False.cs" />
+    <Compile Include="UglifyJS\AST_Finally.cs" />
+    <Compile Include="UglifyJS\AST_For.cs" />
+    <Compile Include="UglifyJS\AST_ForIn.cs" />
+    <Compile Include="UglifyJS\AST_Function.cs" />
+    <Compile Include="UglifyJS\AST_Hole.cs" />
+    <Compile Include="UglifyJS\AST_If.cs" />
+    <Compile Include="UglifyJS\AST_Infinity.cs" />
+    <Compile Include="UglifyJS\AST_Jump.cs" />
+    <Compile Include="UglifyJS\AST_Label.cs" />
+    <Compile Include="UglifyJS\AST_LabeledStatement.cs" />
+    <Compile Include="UglifyJS\AST_LabelRef.cs" />
+    <Compile Include="UglifyJS\AST_Lambda.cs" />
+    <Compile Include="UglifyJS\AST_LoopControl.cs" />
+    <Compile Include="UglifyJS\AST_NaN.cs" />
+    <Compile Include="UglifyJS\AST_New.cs" />
+    <Compile Include="UglifyJS\AST_Node.cs" />
+    <Compile Include="UglifyJS\AST_Null.cs" />
+    <Compile Include="UglifyJS\AST_Number.cs" />
+    <Compile Include="UglifyJS\AST_Object.cs" />
+    <Compile Include="UglifyJS\AST_ObjectGetter.cs" />
+    <Compile Include="UglifyJS\AST_ObjectKeyVal.cs" />
+    <Compile Include="UglifyJS\AST_ObjectProperty.cs" />
+    <Compile Include="UglifyJS\AST_ObjectSetter.cs" />
+    <Compile Include="UglifyJS\AST_PropAccess.cs" />
+    <Compile Include="UglifyJS\AST_RegExp.cs" />
+    <Compile Include="UglifyJS\AST_Return.cs" />
+    <Compile Include="UglifyJS\AST_Scope.cs" />
+    <Compile Include="UglifyJS\AST_Seq.cs" />
+    <Compile Include="UglifyJS\AST_SimpleStatement.cs" />
+    <Compile Include="UglifyJS\AST_Statement.cs" />
+    <Compile Include="UglifyJS\AST_StatementWithBody.cs" />
+    <Compile Include="UglifyJS\AST_String.cs" />
+    <Compile Include="UglifyJS\AST_Sub.cs" />
+    <Compile Include="UglifyJS\AST_Switch.cs" />
+    <Compile Include="UglifyJS\AST_SwitchBranch.cs" />
+    <Compile Include="UglifyJS\AST_Symbol.cs" />
+    <Compile Include="UglifyJS\AST_SymbolAccessor.cs" />
+    <Compile Include="UglifyJS\AST_SymbolCatch.cs" />
+    <Compile Include="UglifyJS\AST_SymbolConst.cs" />
+    <Compile Include="UglifyJS\AST_SymbolDeclaration.cs" />
+    <Compile Include="UglifyJS\AST_SymbolDefun.cs" />
+    <Compile Include="UglifyJS\AST_SymbolFunarg.cs" />
+    <Compile Include="UglifyJS\AST_SymbolLambda.cs" />
+    <Compile Include="UglifyJS\AST_SymbolRef.cs" />
+    <Compile Include="UglifyJS\AST_SymbolVar.cs" />
+    <Compile Include="UglifyJS\AST_This.cs" />
+    <Compile Include="UglifyJS\AST_Throw.cs" />
+    <Compile Include="UglifyJS\AST_Token.cs" />
+    <Compile Include="UglifyJS\AST_TokenType.cs" />
+    <Compile Include="UglifyJS\AST_Toplevel.cs" />
+    <Compile Include="UglifyJS\AST_True.cs" />
+    <Compile Include="UglifyJS\AST_Try.cs" />
+    <Compile Include="UglifyJS\AST_Unary.cs" />
+    <Compile Include="UglifyJS\AST_UnaryPostfix.cs" />
+    <Compile Include="UglifyJS\AST_UnaryPrefix.cs" />
+    <Compile Include="UglifyJS\AST_Undefined.cs" />
+    <Compile Include="UglifyJS\AST_Var.cs" />
+    <Compile Include="UglifyJS\AST_VarDef.cs" />
+    <Compile Include="UglifyJS\AST_While.cs" />
+    <Compile Include="UglifyJS\AST_With.cs" />
+    <Compile Include="UglifyJS\NodeType.cs" />
+    <Compile Include="UglifyJS\SymbolDef.cs" />
+    <Compile Include="UglifyJS\TreeWalker.cs" />
+    <Compile Include="UglifyJS\TreeWalkerDelegate.cs" />
+    <Compile Include="UglifyJS\UglifyJS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NodeLibraries\NodeLibraries.csproj">
+      <Project>{06E82003-D11E-4482-9DC8-9AD109B537A0}</Project>
+      <Name>NodeLibraries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <HintPath>$(SolutionDir)packages\Saltarelle.Runtime.2.4.0\tools\Assemblies\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Saltarelle.jQuery, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a4048e8fcc593f14, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Saltarelle.jQuery.1.10.1\lib\Saltarelle.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Saltarelle.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a4048e8fcc593f14, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Saltarelle.Web.3.0.1\lib\Saltarelle.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="!Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.4.0\tools\Saltarelle.Compiler.targets')" />
+  <Import Project="$(SolutionDir)packages\Saltarelle.Compiler.2.4.0\tools\Saltarelle.Compiler.targets" Condition="Exists('$(SolutionDir)packages\Saltarelle.Compiler.2.4.0\tools\Saltarelle.Compiler.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
