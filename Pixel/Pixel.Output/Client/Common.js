@@ -4,33 +4,6 @@
 	global.Common = global.Common || {};
 	ss.initAssembly($asm, 'Common');
 	////////////////////////////////////////////////////////////////////////////////
-	// Common.ArrayExtensions
-	var $Common_ArrayExtensions = function() {
-	};
-	$Common_ArrayExtensions.__typeName = 'Common.ArrayExtensions';
-	$Common_ArrayExtensions.first = function(T) {
-		return function(elements, conditional) {
-			for (var $t1 = 0; $t1 < elements.length; $t1++) {
-				var element = elements[$t1];
-				if (conditional(element)) {
-					return element;
-				}
-			}
-			return ss.getDefaultValue(T);
-		};
-	};
-	$Common_ArrayExtensions.select = function(T, T2) {
-		return function(elements, conditional) {
-			var ts = [];
-			for (var $t1 = 0; $t1 < elements.length; $t1++) {
-				var element = elements[$t1];
-				ss.add(ts, conditional(element));
-			}
-			return ts;
-		};
-	};
-	global.Common.ArrayExtensions = $Common_ArrayExtensions;
-	////////////////////////////////////////////////////////////////////////////////
 	// Common.Constants
 	var $Common_Constants = function() {
 	};
@@ -124,6 +97,72 @@
 				if (counter(v)) {
 					ss.add(ts, v);
 				}
+			}
+			return ts;
+		};
+	};
+	$Common_EnumerableExtensions.count$1 = function(T) {
+		return function(enumerable, counter) {
+			var count = 0;
+			for (var $t1 = 0; $t1 < enumerable.length; $t1++) {
+				var v = enumerable[$t1];
+				if (counter(v)) {
+					count++;
+				}
+			}
+			return count;
+		};
+	};
+	$Common_EnumerableExtensions.where$1 = function(T) {
+		return function(enumerable, counter) {
+			var ts = [];
+			for (var $t1 = 0; $t1 < enumerable.length; $t1++) {
+				var v = enumerable[$t1];
+				if (counter(v)) {
+					ss.add(ts, v);
+				}
+			}
+			return ts;
+		};
+	};
+	$Common_EnumerableExtensions.first$1 = function(T) {
+		return function(elements, conditional) {
+			for (var $t1 = 0; $t1 < elements.length; $t1++) {
+				var element = elements[$t1];
+				if (conditional(element)) {
+					return element;
+				}
+			}
+			return ss.getDefaultValue(T);
+		};
+	};
+	$Common_EnumerableExtensions.select$1 = function(T, T2) {
+		return function(elements, conditional) {
+			var ts = [];
+			for (var $t1 = 0; $t1 < elements.length; $t1++) {
+				var element = elements[$t1];
+				ss.add(ts, conditional(element));
+			}
+			return Array.prototype.slice.call(ts);
+		};
+	};
+	$Common_EnumerableExtensions.first = function(T) {
+		return function(elements, conditional) {
+			for (var $t1 = 0; $t1 < elements.length; $t1++) {
+				var element = elements[$t1];
+				if (conditional(element)) {
+					return element;
+				}
+			}
+			return ss.getDefaultValue(T);
+		};
+	};
+	$Common_EnumerableExtensions.select = function(T, T2) {
+		return function(elements, conditional) {
+			var ts = [];
+			for (var $t1 = 0; $t1 < elements.length; $t1++) {
+				var element = elements[$t1];
+				ss.add(ts, conditional(element));
 			}
 			return ts;
 		};
@@ -329,7 +368,6 @@
 	$Common_TypeOrFunction$1.__typeName = 'Common.TypeOrFunction$1';
 	ss.initGenericClass($Common_TypeOrFunction$1, $asm, 1);
 	global.Common.TypeOrFunction$1 = $Common_TypeOrFunction$1;
-	ss.initClass($Common_ArrayExtensions, $asm, {});
 	ss.initClass($Common_Constants, $asm, {});
 	ss.initClass($Common_EnumerableExtensions, $asm, {});
 	ss.initClass($Common_ExtensionMethods, $asm, {});

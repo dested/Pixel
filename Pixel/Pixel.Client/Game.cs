@@ -1,4 +1,5 @@
 ﻿using System.Html;
+using System.Runtime.CompilerServices;
 using Pixel.Client.Model;
 using Pixel.Client.Utils;
 using Pixel.Common.Model;
@@ -24,10 +25,12 @@ namespace Pixel.Client
             Window.AddEventListener("resize", resizeCanvas, false);
             resizeCanvas();
 
-            CurrentGameView = new GameView(ScreenModel, new GameModel(StaticData.FakeGameData[0]));
+            CurrentGameView = new GameView(ScreenModel, new RenderGameModel(StaticData.FakeGameData[0]));
         }
 
+        [IntrinsicProperty]
         public ScreenModel ScreenModel { get; set; }
+        [IntrinsicProperty]
         public GameView CurrentGameView { get; set; }
 
         private void resizeCanvas()

@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace Pixel.Common.Data
 {
+    [Serializable]
     public class GameData
     {
         public GameData()

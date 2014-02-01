@@ -1,8 +1,10 @@
-﻿using Pixel.Common.Data;
+﻿using System;
+using System.Runtime.CompilerServices;
+using Pixel.Common.Data;
 
 namespace Pixel.Common.Model
 {
-    public class SpriteInstanceModel
+    public abstract class SpriteInstanceModel
     {
         public SpriteInstanceModel(SpriteInstanceData spriteInstanceData)
         {
@@ -11,8 +13,11 @@ namespace Pixel.Common.Model
             Index = spriteInstanceData.Index;
         }
 
+        [IntrinsicProperty]
         public int StartX { get; set; }
+        [IntrinsicProperty]
         public int StartY { get; set; }
+        [IntrinsicProperty]
         public int Index { get; set; }
     }
 }

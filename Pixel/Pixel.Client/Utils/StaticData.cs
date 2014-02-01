@@ -12,7 +12,7 @@ namespace Pixel.Client.Utils
             FakeGameData = new List<GameData>();
             FakeGameData.Add(new GameData
                              {
-                                 Name = "Game One",
+                                 Name = "First Level",
                                  Palette = new List<string> {"red", "blue"},
                                  TileWidth = 16,
                                  TileHeight = 16,

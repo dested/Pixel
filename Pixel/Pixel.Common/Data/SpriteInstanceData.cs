@@ -1,5 +1,8 @@
-﻿namespace Pixel.Common.Data
+﻿using System;
+
+namespace Pixel.Common.Data
 {
+    [Serializable]
     public class SpriteInstanceData
     {
         public int StartX { get; set; }

@@ -46,6 +46,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{758bfba8-9f72-48ac-a73f-23e7a8d8c29f}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pixel.Common\Pixel.Common.csproj">
       <Project>{76d3bc28-0828-4217-b1a3-d907d3588619}</Project>
       <Name>Pixel.Common</Name>

@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Pixel.Common.Data
 {
+    [Serializable]
     public class BoardData
     {
         public List<int> BgTiles { get; set; }

@@ -8,6 +8,7 @@ namespace Pixel.Server.Model
         public ServerSpriteInstanceModel(SpriteInstanceData spriteInstanceData)
             : base(spriteInstanceData)
         {
+
         }
          
     }
